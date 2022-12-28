@@ -122,6 +122,11 @@ sudo docker rm 5e2096c15141
 sudo docker run -it -v apachevol:/usr/local/apache2/htdocs/ -p 9898:80 --name apachenew httpd bash
 
 ```
+-when delete container that attach the volume , the volume not deleted
+
+
+
+-access page.html from port 9898
 
 ### Problem 4
 
