@@ -139,3 +139,45 @@ sudo docker commit 2e89199be9cf  myapache
 ```
 
 4. Create a dockerfile for ngnix and build the image from this dockerfile
+```
+#Dockerfile without extention
+touch Dockerfile
+```
+```
+# . means current dir , OR path of Dockerfiles
+# -t <tagName>
+sudo docker build . -t mynginx
+```
+```
+sudo docker images
+```
+OUTPUT
+```
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+mynginx      latest    1c6952d7fdc8   39 seconds ago   142MB
+```
+
+### Problem 5
+
+1. Create a volume called mysql_data, then deploy a MySQL database called app-database. Use the mysql latest image, and use the -e flag to set MYSQL_ROOT_PASSWORD to P4sSw0rd0!.Mount the mysql_data volume to /var/lib/mysql.The container should run in the background.
+
+```
+sudo docker volume create mysql_data
+```
+
+```
+# list all volumes in docker engine
+sudo ls /var/lib/docker/volumes
+
+#OUTPUT
+
+apachevol  backingFsBlockDev  metadata.db  mysql_data
+
+```
+
+
+
+```
+#-d : run container in background
+sudo docker run -d --name app-database --mount type=volume,source=mysql_data,target=/var/lib/mysql -e MYSQL_ROOT_PASSWORD=P4ssW0rd0! mysql:latest
+```
