@@ -7,7 +7,7 @@
 1. Run the container hello-world
 
 ```
-## docker run
+# docker run imageName
 sudo docker run hello-world
 ```
 
