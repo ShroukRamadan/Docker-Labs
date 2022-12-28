@@ -130,7 +130,8 @@ touch new.html
 ```
 echo "Welcom to new html file" >> new.html
 ```
-![alt image][/home/shrouk/Music/p4.png]
+![p4](https://user-images.githubusercontent.com/57557314/209865181-1a34a33e-4b6a-459e-beed-dcf51aa8a3d6.png)
+
 
 3. Commit the container with image name my apache
 
