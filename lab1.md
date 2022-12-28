@@ -12,12 +12,10 @@ sudo docker run hello-world
 
 ```
 
-
-
 2. Check the container status
 
 ``` 
- sudo docker ps -a
+sudo docker ps -a
 ```
 
 3. Start the stopped container
@@ -78,7 +76,7 @@ touch hello-docker
 
 ```
 # docker remove containerId
- sudo docker rm e67de2
+sudo docker rm e67de2
 ```
 when removing container the file removed also
 
@@ -86,8 +84,8 @@ when removing container the file removed also
 5. Remove all stopped containers
 
 ```
-
- sudo docker rm -f
+#-f : all stoped container
+sudo docker rm -f
 ```
 
 ### Problem 3
@@ -120,19 +118,19 @@ sudo docker run -it -v apachevol:/usr/local/apache2/htdocs/ -p 9898:80 --name ap
 1. Run the image httpd again without attaching any volumes 
 
 ```
- sudo docker run -it  -p 9898:80 --name problem4 httpd bash
+sudo docker run -it  -p 9898:80 --name problem4 httpd bash
 ```
 
 2. Add html static files to the container and make sure they are accessible
    
-   In shell
-
-   ```
-   touch new.html
-   ```
-   ```
-   echo "Welcom to new html file" >> new.html
-   ```
+In shell
+```
+touch new.html
+```
+```
+echo "Welcom to new html file" >> new.html
+```
+[/home/shrouk/Music/p4.png]
 
 3. Commit the container with image name my apache
 
