@@ -6,7 +6,7 @@
 
 1. Run the container hello-world
 
-```
+```bash
 # docker run imageName 
 sudo docker run hello-world
 
@@ -27,7 +27,7 @@ sudo docker start 5d62
 
 4. Remove the container
 
-```
+```bash
 # docker rm containerId
 sudo docker rm 5d62
 
@@ -45,14 +45,14 @@ sudo docker image rm hello-world
 
 1. Run container centos or ubuntu in an interactive mode
 
-```
+```bash
 # -i :run container in interactive mod
 sudo docker run -i ubuntu
 ```
 
 2. Run the following command in the container “echo docker ”
 
-```
+```bash
 # display docker word
 echo docker
 
@@ -62,19 +62,19 @@ echo docker
 3.Open a bash shell in the container and touch a file named hello-docker
 
 In shell 
-```
+```bash
 # create file
 touch hello-docker
 ```
 
 4. Stop the container and remove it. Write your comment about the file hello-docker
 
-```
+```bash
 # docker stop cntainerId 
  sudo docker stop e67de2
 ```
 
-```
+```bash
 # docker remove containerId
 sudo docker rm e67de2
 ```
@@ -83,9 +83,10 @@ when removing container the file removed also
 
 5. Remove all stopped containers
 
-```
+```bash
 #-f : all stoped container
-sudo docker rm -f
+#sudo docker rm -f
+sudo docker container prune 
 ```
 
 ### Problem 3
@@ -96,11 +97,20 @@ sudo docker rm -f
 ```
 sudo docker run -it -v apachevol:/usr/local/apache2/htdocs -p 8090:80 --name apache httpd bash
 ```
+In shell
+```
+touch /usr/local/apache2/htdocs/page.html
+```
+
+```
+echo "Hello From Page.html" >> /usr/local/apache2/htdocs/page.html 
+```
+
 
 2. Remove the container
 
 ```
-sudo docker rm 9cd83
+sudo docker rm 5e2096c15141
 ```
 
 3. Run a new container with the following:
@@ -140,11 +150,12 @@ sudo docker commit 2e89199be9cf  myapache
 ```
 
 4. Create a dockerfile for ngnix and build the image from this dockerfile
-```
+
+```bash
 #Dockerfile without extention
 touch Dockerfile
 ```
-```
+```bash
 # . means current dir , OR path of Dockerfiles
 # -t <tagName>
 sudo docker build . -t mynginx
@@ -166,7 +177,7 @@ mynginx      latest    1c6952d7fdc8   39 seconds ago   142MB
 sudo docker volume create mysql_data
 ```
 
-```
+```bash
 # list all volumes in docker engine
 sudo ls /var/lib/docker/volumes
 
@@ -178,7 +189,7 @@ apachevol  backingFsBlockDev  metadata.db  mysql_data
 
 
 
-```
+```bash
 #-d : run container in background
 sudo docker run -d --name app-database --mount type=volume,source=mysql_data,target=/var/lib/mysql -e MYSQL_ROOT_PASSWORD=P4ssW0rd0! mysql:latest
 ```
