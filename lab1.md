@@ -130,7 +130,7 @@ touch new.html
 ```
 echo "Welcom to new html file" >> new.html
 ```
-[/home/shrouk/Music/p4.png]
+![alt image][/home/shrouk/Music/p4.png]
 
 3. Commit the container with image name my apache
 
