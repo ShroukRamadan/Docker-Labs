@@ -31,8 +31,24 @@ sudo docker run --name con-nginx -p 8080:80 nginximg
 
 1 .Create react app docker container "using single stage, Multi-Stage Dockerfile"
 
+```bash
+# create a project called my-app
+npx create-react-app my-app
+```
+```
+cd my-app
+touch Dockerfile
+```
 
-https://jsramblings.com/dockerizing-a-react-app/
+```
+sudo docker build . -t react-img:1.0
+```
+```
+sudo docker run -p 3000:80 -d react-img:1.0
+```
+
+- Access my-react-app with port 3000
+
 
 
 ### Problem 3

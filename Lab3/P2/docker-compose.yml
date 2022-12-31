@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+    web-app:
+        container_name: "python-con"
+        build: .
+        command: python app.py
+        ports:
+            - target: 5000
+              published: 5000
+
+        networks:
+            - counter-net
+        volumes:
+            - type: volume
+              source: counter-vol
+              target: /python-app
+    redis:
+        container_name: "redis-con"
+        image: "redis:alpine"
+        networks:
+            counter-net:
+
+networks:
+    counter-net:
+
+volumes:
+   counter-vol:
+
