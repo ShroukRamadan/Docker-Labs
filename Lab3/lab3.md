@@ -27,6 +27,7 @@ con-react-app   /docker-entrypoint.sh ngin ...   Up      0.0.0.0:3000->80/tcp,::
 
 - Access con-react-app with port 3000
  
+![3-p1](https://user-images.githubusercontent.com/57557314/210154991-ffb80227-0f41-48a9-8265-7aeb8715cada.png)
 
 
 
@@ -59,3 +60,8 @@ OUTPUT
 python-con   python app.py                    Exit 0        
 redis-con    docker-entrypoint.sh redis ...   Exit 0    
 ```
+- Access python app
+
+![l3-p2](https://user-images.githubusercontent.com/57557314/210155020-b6a03aa4-57db-4fff-b2da-cce2a7e92580.png)
+
+
