@@ -25,6 +25,7 @@ sudo docker run --name con-nginx -p 8080:80 nginximg
 ```
 - Access templete.html with port 8080
 
+![1](https://user-images.githubusercontent.com/57557314/210155098-b29307f6-0430-48db-b4ce-9892f3bd2e4c.png)
 
 
 ### Problem 2
@@ -49,6 +50,7 @@ sudo docker run -p 3000:80 -d react-img:1.0
 
 - Access my-react-app with port 3000
 
+![lab2-p2](https://user-images.githubusercontent.com/57557314/210155112-89ed2323-3154-491f-947c-6aed8b4d5748.png)
 
 
 ### Problem 3
